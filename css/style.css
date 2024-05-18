@@ -57,6 +57,9 @@ body{
     font-style: normal;
     margin-left: 0px; /* Tambahkan margin kiri untuk menciptakan jarak antara logo dan teks */
 }
+.navbar .navbar-nav {
+    margin-left: auto; /* Memindahkan elemen navbar-nav ke kanan */
+}
 .navbar .navbar-nav a{
     color: #fff;
     display: inline-block;
@@ -278,6 +281,9 @@ background-color: var(--primary);
 cursor: pointer;
 border-radius: 2cap;
 }
+.contact .row form .btn:hover {
+    background-color: #45a049; /* Warna latar belakang tombol berbeda saat di-hover */
+}
 
 /* footer */
 footer{
@@ -365,7 +371,7 @@ footer .credit a{
     }
 
     .navbar .navbar-nav a{
-        color: var(--bg);
+        color: var(--primary);
         display: block;
         margin: 1.5rem;
         padding: 0.5;
