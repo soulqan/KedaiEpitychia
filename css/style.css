@@ -1,6 +1,6 @@
 :root{
     --primary: #b6895b;
-    --bg: #010101;
+    --bg: #fff;
 
 }
 
@@ -20,7 +20,7 @@ html{
 body{
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg);
-    color: #fff;
+    color: #6B240C;
     
     
 }
@@ -31,7 +31,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 1.4rem 7%;
-    background-color: rgba(1, 1, 1, 0.8);
+    background-color: rgb(140,70,27);
     border-bottom: 1px solid #614931;
     position: fixed;
     top: 0;
@@ -40,13 +40,22 @@ body{
     z-index: 99999;
 
 }
+.navbar .logo-epi {
+    display: flex;
+    align-items: center; /* Memastikan elemen dalam div .logo-epi berada di tengah secara vertikal */
+}
+.navbar .logo-epi img {
+    width: 30px;
+    height: auto;
+    margin-right: 5px; /* Tambahkan margin kanan untuk menciptakan jarak antara logo dan teks */
+}
 
-.navbar .navbar-logo{
-    font-size: 2rem;
+.navbar .logo-epi .navbar-logo {
+    font-size: 1.8rem;
     font-weight: 700;
-    color: #b6895b;
-    font-style: italic;
-
+    color: #ffffff;
+    font-style: normal;
+    margin-left: 0px; /* Tambahkan margin kiri untuk menciptakan jarak antara logo dan teks */
 }
 .navbar .navbar-nav a{
     color: #fff;
@@ -105,7 +114,7 @@ body{
     width: 100%;
     height: 30%;
     bottom: 0;;
-    background: linear-gradient(0deg, rgba(1,1,3,1) 8%, rgba(255, 255,255,0)50%);
+    background: linear-gradient(0deg, rgb(255, 255, 255) 8%, rgba(255, 255,255,0)50%);
 }
 .hero .content{
     padding: 1.4rem 7%;
@@ -127,6 +136,7 @@ body{
     margin-top: 1rem;
     line-height: 1.4;
     font-weight: 100;
+    color: #fff;
     text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
     mix-blend-mode: difference;
 }
@@ -223,19 +233,22 @@ body{
 .contact .row{
     display: flex;
     margin-top: 2rem;
-    background-color: #222;
+    background-color: #543310;
+    border-radius: 3cap;
     
 }
 .contact .row .map{
     flex: 1 1 45rem;
     width: 100%;
     object-fit: cover;
+    border-radius: 3cap;
 }
 
 .contact .row form{
 flex: 1 1 45rem;
 padding: 5rem 2rem;
 text-align: center;
+
 }
 
 .contact .row form .input-group{
@@ -245,6 +258,7 @@ text-align: center;
     background-color: var(--bg);
     border: 1px solid #eee;
     padding-left: 2rem;
+    border-radius: 2cap;
 }
 
 .contact .row form .input-group input {
@@ -262,6 +276,7 @@ font-size: 1.7rem;
 color: #fff;
 background-color: var(--primary);
 cursor: pointer;
+border-radius: 2cap;
 }
 
 /* footer */
@@ -344,6 +359,9 @@ footer .credit a{
     }
     .navbar .navbar-nav.active{
         right: 0;
+    }
+    .navbar .logo-epi .navbar-logo {
+        display: none; /* Menghilangkan tulisan logo ketika lebar layar kurang dari atau sama dengan 600px */
     }
 
     .navbar .navbar-nav a{
