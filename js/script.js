@@ -2,7 +2,8 @@
 const navbarNav =document.querySelector('.navbar-nav');
 
 //ketika menu di click
-document.querySelector('#hum-menu').onclick =()=>{
+document.querySelector('#hum-menu').onclick =(e)=>{
+    e.preventDefault();
    navbarNav.classList.toggle('active'); 
 };
 
@@ -10,10 +11,10 @@ document.querySelector('#hum-menu').onclick =()=>{
 //klik diluar sidebar untuk menghilankan nav
 const humberger =document.querySelector('#hum-menu');
 
+
 document.addEventListener('click', function(e){
     if (!humberger.contains(e.target)&&!navbarNav.contains(e.target)) {
         navbarNav.classList.remove('active');
-        
     }
 });
 
